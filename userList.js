@@ -1,5 +1,14 @@
-const users=[{
-    email:"azer@qwe.qwe",
-    password:"qweqwe"
-}];
-module.exports=users;
+const mongoose=require('mongoose');
+
+const usersSchema= mongoose.Schema({
+  fullName:{
+    type:String,
+  },  
+  email:{
+    type:String,
+  },  
+  password:{
+    type:String,
+  },  
+});
+module.exports=mongoose.model('users',usersSchema);
